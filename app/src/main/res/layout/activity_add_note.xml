@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.add_note.view.AddNoteActivity">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/titleTextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/title"
+            android:layout_margin="@dimen/margin_20"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@drawable/box_color"
+            android:textSize="@dimen/size_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:hintTextColor="@color/mainColor"
+            app:boxCornerRadiusTopEnd="@dimen/radius_15"
+            app:boxCornerRadiusBottomEnd="@dimen/radius_15"
+            app:boxCornerRadiusTopStart="@dimen/radius_15"
+            android:textColorHint="@color/grey"
+
+            app:boxCornerRadiusBottomStart="@dimen/radius_15"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:id="@+id/et_title"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/noteTextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/note"
+            android:layout_margin="@dimen/margin_20"
+            app:boxBackgroundMode="outline"
+
+            android:textColorHint="@color/grey"
+            app:boxStrokeColor="@drawable/box_color"
+            android:textSize="@dimen/size_24"
+            app:boxCornerRadiusTopEnd="@dimen/radius_15"
+            app:boxCornerRadiusBottomEnd="@dimen/radius_15"
+            app:boxCornerRadiusTopStart="@dimen/radius_15"
+            app:boxCornerRadiusBottomStart="@dimen/radius_15"
+            app:layout_constraintTop_toBottomOf="@id/titleTextField"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:hintTextColor="@color/mainColor"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:textColor="@color/black"
+
+                android:textColorHint="@color/grey"
+                android:gravity="start"
+                android:id="@+id/et_note"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/bt_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_20"
+            android:background="@drawable/button_shape"
+            android:text="@string/add_note"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/noteTextField"></Button>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
